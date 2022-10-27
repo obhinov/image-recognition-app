@@ -1,0 +1,14 @@
+{
+  "name": "backend-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rekog_app.js",
+  "dependencies": {
+    "@aws-sdk/client-rekognition": "^3.131.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-iam-roles-per-function": "^3.2.0"
+  }
+}

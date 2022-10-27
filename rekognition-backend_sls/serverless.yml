@@ -1,0 +1,30 @@
+service: backend-v1
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: us-east-2
+  stage: dev
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - rekognition:*
+      Resource: "*"
+
+functions:
+  rekog_app:
+    handler: rekog_app.handler
+    events:
+      - http:
+          path: rekog_app_path/{key}
+          method: GET
+          cors: true
+#plugins:
+#  - serverless-iam-roles-per-function
+
+
+#- s3:GetObject
+#- s3:GetObjectMetadata
