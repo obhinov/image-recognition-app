@@ -24,3 +24,6 @@ Once that's done, you should see two stacks created on AWS Cloudformation.
 6. Create an S3 bucket with ACLs enabled, and unchecking "Block all public access"
 7. From "presigned-urls_aws-sam/frontend", upload the "index.html" file into the S3 bucket with "grant-read-access" enabled.
 8. Open index.html in the S3 bucket you created, and you're ready to go!
+
+References:
+ - Uploading to S3 from the web app: https://aws.amazon.com/blogs/compute/uploading-to-amazon-s3-directly-from-a-web-or-mobile-application/
